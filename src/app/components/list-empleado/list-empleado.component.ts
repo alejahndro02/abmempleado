@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
+import {MatPaginator} from '@angular/material/paginator';
+
 
 export interface PeriodicElement {
   name: string;
@@ -28,9 +30,11 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class ListEmpleadoComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
+  @ViewChild(MatPaginator, {static:true}) paginator: MatPaginator;
   constructor() { }
 
   ngOnInit(): void {
+    this.dataSource.paginator = this.paginator;
   }
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
