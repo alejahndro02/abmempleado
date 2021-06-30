@@ -8,6 +8,7 @@ import { AddEditEmpleadoComponent } from './components/add-edit-empleado/add-edi
 import { ListEmpleadoComponent } from './components/list-empleado/list-empleado.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MensajeConfirmacionComponent } from './components/shared/mensaje-confirmacion/mensaje-confirmacion.component';
+import { AngularMaterialModule } from './components/shared/angular-material/angular-material.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MensajeConfirmacionComponent } from './components/shared/mensaje-confir
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AngularMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
