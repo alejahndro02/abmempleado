@@ -6,3 +6,15 @@ table {
     font-size: 20px;
     width: 100%;
 }
+
+.editar {
+    color: #1878b0;
+}
+
+.borrar {
+    color: #e15639;
+}
+
+.pointer {
+    cursor: pointer;
+}
