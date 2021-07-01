@@ -33,7 +33,9 @@ export class ListEmpleadoComponent implements OnInit {
   cargarEmpleados(){
     this.listEmpleado =this.empleadoService.getEmpleados();
     this.dataSource = new MatTableDataSource(this.listEmpleado);
-    console.log(this.listEmpleado);
-    
+  }
+  eliminarEmpleado(index:number){
+    this.empleadoService.eliminarEmpleado(index);
+    this.cargarEmpleados();
   }
 }
