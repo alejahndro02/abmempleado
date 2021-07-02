@@ -12,7 +12,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 
-
 @NgModule({
   declarations: [],
   imports: [
