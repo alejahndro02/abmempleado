@@ -21,7 +21,8 @@ export class ListEmpleadoComponent implements OnInit {
   listEmpleado: Empleado[];
   @ViewChild(MatPaginator, {static:true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static:true}) sort: MatSort;
-  constructor(private empleadoService: EmpleadoService, public dialog: MatDialog) { }
+  constructor(private empleadoService: EmpleadoService, 
+              public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.cargarEmpleados();
