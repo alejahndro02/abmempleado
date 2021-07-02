@@ -10,3 +10,8 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
     background-color: rgb(44, 44, 44);
 }
+
+simple-snack-bar span {
+    margin: auto;
+    text-align: center;
+}
