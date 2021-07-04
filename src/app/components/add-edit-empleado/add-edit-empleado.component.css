@@ -1,0 +1,18 @@
+.example-container {
+    width: 100%;
+}
+
+mat-radio-button {
+    margin-right: 15px;
+}
+
+.btn-success,
+.btn-secondary {
+    background-color: #212121;
+    border-color: #212121;
+    margin-left: 15px;
+}
+
+.imagen-section {
+    margin: auto;
+}
