@@ -16,3 +16,7 @@ mat-radio-button {
 .imagen-section {
     margin: auto;
 }
+
+.mda-form-msg {
+    color: #f44336;
+}
