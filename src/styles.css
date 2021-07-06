@@ -15,7 +15,12 @@ simple-snack-bar span {
     text-align: center;
 }
 
-mat-label,
+button:focus {
+    outline: none;
+}
+
+
+/* mat-label,
 mat-datepicker-toggle {
     color: rgba(43, 43, 43, 0.753);
-}
+} */
