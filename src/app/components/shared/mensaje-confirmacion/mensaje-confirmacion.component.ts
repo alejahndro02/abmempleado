@@ -8,10 +8,10 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class MensajeConfirmacionComponent implements OnInit {
  mensaje:string;
- btn = 'aceptar'
+ btn = 'aceptar';
   constructor(public dialogRef: MatDialogRef<MensajeConfirmacionComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any) { 
-      this.mensaje= data.mensaje;
+      this.mensaje = data.mensaje;
     }
 
   ngOnInit(): void {
