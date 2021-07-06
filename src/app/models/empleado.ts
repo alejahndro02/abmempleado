@@ -1,8 +1,8 @@
 export class Empleado{
     nombreCompleto:string;
-    telefono:number;
     correo:string;
     fechaIngreso:Date;
+    telefono:number;
     estadoCivil:string;
     genero:string;
 }
