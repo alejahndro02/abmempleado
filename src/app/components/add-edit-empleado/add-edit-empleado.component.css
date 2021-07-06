@@ -2,19 +2,10 @@
     width: 100%;
 }
 
-mat-radio-button {
-    margin-right: 15px;
-}
-
-.btn-success,
-.btn-secondary {
-    background-color: #212121;
-    border-color: #212121;
+.btn-success {
+    background-color: #f44336;
+    border-color: #f44336;
     margin-left: 15px;
-}
-
-.imagen-section {
-    margin: auto;
 }
 
 .mda-form-msg {
