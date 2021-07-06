@@ -1,9 +1,9 @@
-//Modelo
-import { Empleado } from './../../models/empleado';
-//Servicio
-import { EmpleadoService } from './../../services/empleado.service';
-//Modulos
 import { Component, OnInit, ViewChild } from '@angular/core';
+//Modelo
+import { Empleado } from 'src/app/models/empleado';
+//Servicio
+import { EmpleadoService } from 'src/app/services/empleado.service';
+//Modulos
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
@@ -17,14 +17,15 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./list-empleado.component.css']
 })
 export class ListEmpleadoComponent implements OnInit {
-  displayedColumns: string[] = ['nombreCompleto', 'telefono', 'correo', 'fechaIngreso', 'estadoCivil', 'sexo', 'acciones'];
+  displayedColumns: string[] = ['nombreCompleto', 'correo', 'fechaIngreso', 'telefono', 'estadoCivil', 'genero', 'acciones'];
   dataSource = new MatTableDataSource();
   listEmpleado: Empleado[];
-  @ViewChild(MatPaginator, {static:true}) paginator: MatPaginator;
+
   @ViewChild(MatSort, {static:true}) sort: MatSort;
+  @ViewChild(MatPaginator, {static:true}) paginator: MatPaginator;
   constructor(private empleadoService: EmpleadoService, 
               public dialog: MatDialog,
-              private _snackBar: MatSnackBar) { }
+              public snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.cargarEmpleados();
@@ -49,7 +50,7 @@ export class ListEmpleadoComponent implements OnInit {
       if(result === 'aceptar'){
         this.empleadoService.eliminarEmpleado(index);
         this.cargarEmpleados();
-        this._snackBar.open('El empleado fue eliminado con exito', '', {
+        this.snackBar.open('El empleado fue eliminado con exito', '', {
           duration:3000
         });
       }
